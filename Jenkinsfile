@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 echo 'Oops...'
-                exit 1
+                //exit 1
             }
         }
     }
