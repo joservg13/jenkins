@@ -1,23 +1,11 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-                echo 'Oops...'
-                //exit 1
-            }
-        }
-    }
+node {
+stage('Deploy staging') {
+echo 'Hello World'
+}
+stage ('Ask for input') {
+input "Continue?"
+}
+stage('Deploy to production') {
+echo 'Deploy to production'
+}
 }
